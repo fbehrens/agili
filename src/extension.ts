@@ -4,7 +4,7 @@ export function activate(context: vscode.ExtensionContext) {
 
 	console.log('activate myCodeExt1');
 
-	let disposable = vscode.commands.registerCommand('mycodeext1.helloWorld', () => {
+	let disposable = vscode.commands.registerCommand('mycodeext1.helloWarning', () => {
 		vscode.window.showWarningMessage('warning from myCodeExt1');
 	});
 	context.subscriptions.push(disposable);

@@ -10,14 +10,14 @@
 		"Other"
 	],
 	"activationEvents": [
-        "onCommand:mycodeext1.helloWorld"
+        "onCommand:mycodeext1.helloWarning"
 	],
 	"main": "./out/extension.js",
 	"contributes": {
 		"commands": [
 			{
-				"command": "mycodeext1.helloWorld",
-                "title": "Hello World"
+				"command": "mycodeext1.helloWarning",
+                "title": "Hello Warning"
 			}
 		]
 	},
