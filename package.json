@@ -1,7 +1,12 @@
 {
-	"name": "mycodeext1",
-	"displayName": "myCodeExt1",
-	"description": "description of mCodeExt1",
+    "name": "agili",
+    "publisher": "fbehrens",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/fbehrens/agili.git"
+    },
+	"displayName": "agili",
+	"description": "Tools for Agile-Development",
 	"version": "0.0.1",
 	"engines": {
 		"vscode": "^1.45.0"
@@ -10,19 +15,24 @@
 		"Other"
 	],
 	"activationEvents": [
-        "onCommand:mycodeext1.helloWarning",
-        "onCommand:mycodeext1.Time"
+        "onCommand:agili.helloWarning",
+        "onCommand:agili.Time",
+        "onCommand:agili.saveAndRepeat"
 	],
 	"main": "./out/extension.js",
 	"contributes": {
 		"commands": [
 			{
-				"command": "mycodeext1.helloWarning",
-                "title": "Hello Warning"
+				"command": "agili.helloWarning",
+                "title": "agili: Hello Warning"
 			},
 			{
-				"command": "mycodeext1.Time",
-                "title": "ShowTime"
+				"command": "agili.saveAndRepeat",
+                "title": "agili: Save and Reapeat"
+			},
+			{
+				"command": "agili.Time",
+                "title": "agili: ShowTime"
 			}
 		]
 	},
