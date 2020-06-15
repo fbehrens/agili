@@ -1,13 +1,13 @@
 {
-    "name": "agili",
-    "publisher": "fbehrens",
-    "repository": {
-        "type": "git",
-        "url": "https://github.com/fbehrens/agili.git"
-    },
+	"name": "agili",
+	"publisher": "fbehrens",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/fbehrens/agili.git"
+	},
 	"displayName": "agili",
 	"description": "Tools for Agile-Development",
-	"version": "0.0.1",
+	"version": "0.0.2",
 	"engines": {
 		"vscode": "^1.45.0"
 	},
@@ -15,14 +15,14 @@
 		"Other"
 	],
 	"activationEvents": [
-        "onCommand:agili.saveAndRepeat"
+		"onCommand:agili.saveAndRepeat"
 	],
 	"main": "./out/extension.js",
 	"contributes": {
 		"commands": [
 			{
 				"command": "agili.saveAndRepeat",
-                "title": "agili: Save and Reapeat"
+				"title": "agili: Save and Reapeat"
 			}
 		]
 	},
