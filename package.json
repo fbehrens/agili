@@ -15,24 +15,14 @@
 		"Other"
 	],
 	"activationEvents": [
-        "onCommand:agili.helloWarning",
-        "onCommand:agili.Time",
         "onCommand:agili.saveAndRepeat"
 	],
 	"main": "./out/extension.js",
 	"contributes": {
 		"commands": [
 			{
-				"command": "agili.helloWarning",
-                "title": "agili: Hello Warning"
-			},
-			{
 				"command": "agili.saveAndRepeat",
                 "title": "agili: Save and Reapeat"
-			},
-			{
-				"command": "agili.Time",
-                "title": "agili: ShowTime"
 			}
 		]
 	},
