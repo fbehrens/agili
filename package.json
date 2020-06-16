@@ -7,7 +7,7 @@
 	},
 	"displayName": "agili",
 	"description": "Tools for Agile-Development",
-	"version": "0.0.2",
+	"version": "0.1.0",
 	"engines": {
 		"vscode": "^1.45.0"
 	},
@@ -23,11 +23,11 @@
 		"commands": [
 			{
 				"command": "agili.saveAndRepeat",
-                "title": "agili: Save and Repeat last Command in Terminal"
+				"title": "agili: Save and Repeat last Command in Terminal"
 			},
 			{
 				"command": "agili.saveAllAndRepeat",
-                "title": "agili: Save All and Repeat last Command in Terminal"
+				"title": "agili: Save All and Repeat last Command in Terminal"
 			}
 		]
 	},
