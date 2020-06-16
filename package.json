@@ -15,14 +15,19 @@
 		"Other"
 	],
 	"activationEvents": [
-		"onCommand:agili.saveAndRepeat"
+		"onCommand:agili.saveAndRepeat",
+		"onCommand:agili.saveAllAndRepeat"
 	],
 	"main": "./out/extension.js",
 	"contributes": {
 		"commands": [
 			{
 				"command": "agili.saveAndRepeat",
-				"title": "agili: Save and Reapeat"
+                "title": "agili: Save and Repeat last Command in Terminal"
+			},
+			{
+				"command": "agili.saveAllAndRepeat",
+                "title": "agili: Save All and Repeat last Command in Terminal"
 			}
 		]
 	},

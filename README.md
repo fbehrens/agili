@@ -2,7 +2,8 @@
 
 ## Features
 
-* `saveAndRepeat`: Save the current file, then execute the Last Command in the Terminal (by sending `up+enter`)
+* `saveAndRepeat`: Save current file, then execute the Last Command in the Terminal (by sending `up+enter`)
+* `saveAndRepeatAll`: Save All, then execute the Last Command in the Terminal (by sending `up+enter`)
 
 ## Recommended Keybindings
 
