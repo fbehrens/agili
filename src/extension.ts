@@ -1,10 +1,11 @@
 import * as vscode from 'vscode';
 import { Console } from 'console';
 import u from './util';
+var util = require('util');
 
 export function activate(context: vscode.ExtensionContext) {
 
-    console.log('activate');
+    console.log('activate2');
 	context.subscriptions.push(vscode.commands.registerCommand('agili.saveAndRepeat', () => {
         vscode.commands.executeCommand('workbench.action.files.save').then( () =>
         vscode.commands.executeCommand('workbench.action.terminal.sendSequence',{"text":"\u001b[A\u000D" }));
@@ -20,22 +21,24 @@ export function activate(context: vscode.ExtensionContext) {
         // let u =vscode.Uri.parse("https://heise.de");
         // vscode.env.openExternal(u);
 
-        // const t= vscode.window.activeTerminal;
-        // if (!t){ return undefined; };
-        // const e = vscode.window.activeTextEditor;
-        // if (!e){ return undefined; };
-        // let selectionRange: vscode.Range;
-        // if (e.selection.isEmpty) {
-        //     selectionRange = e.document.lineAt(e.selection.start.line).range;
-        //     vscode.commands.executeCommand('cursorDown').then( () =>
-        //     vscode.commands.executeCommand('cursorHome'));
-        //  } else {
-        //     selectionRange = new vscode.Range( e.selection.start, e.selection.end);
-        // }
-        // const sel = e.document.getText(selectionRange);
-        // t.sendText(sel);
+        const t= vscode.window.activeTerminal;
+        if (!t){ return undefined; };
+        const e = vscode.window.activeTextEditor;
+        if (!e){ return undefined; };
+        let selectionRange: vscode.Range;
+        if (e.selection.isEmpty) {
+            selectionRange = e.document.lineAt(e.selection.start.line).range;
+            vscode.commands.executeCommand('cursorDown').then( () =>
+            vscode.commands.executeCommand('cursorHome'));
+         } else {
+            selectionRange = new vscode.Range( e.selection.start, e.selection.end);
+        }
+        const text = e.document.getText(selectionRange);
+        console.log(util.inspect(text));
+        t.sendText(text);
+        console.log("zwei");
 
-        console.log(`Util.increment(3)=${ u.increment(3) }`);
+        // console.log(`Util.increment(3)=${ u.increment(3) }`);
     }));
 }
 
