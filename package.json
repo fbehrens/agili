@@ -16,7 +16,8 @@
 	],
 	"activationEvents": [
         "onCommand:agili.saveAndRepeat",
-        "onCommand:agili.saveAllAndRepeat"
+        "onCommand:agili.saveAllAndRepeat",
+        "onCommand:agili.hello"
 	],
 	"main": "./out/extension.js",
 	"contributes": {
@@ -28,8 +29,15 @@
 			{
 				"command": "agili.saveAllAndRepeat",
 				"title": "agili: Save All and Repeat last Command in Terminal"
+			},
+			{
+				"command": "agili.Hello",
+				"title": "agili: Hello"
 			}
-		]
+		],
+        "keybindings": [
+            {"key": "Alt+F12", "command": "agili.hello", "args": false }
+        ]
 	},
 	"scripts": {
 		"vscode:prepublish": "npm run compile",
