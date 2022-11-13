@@ -31,7 +31,7 @@
                 "title": "agili: Save All and Repeat last Command in Terminal"
             },
             {
-                "command": "agili.Hello",
+                "command": "agili.hello",
                 "title": "agili: Hello"
             }
         ],
