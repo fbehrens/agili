@@ -1,4 +1,5 @@
 import * as vscode from 'vscode';
+import Fbutil from './lib/fbutil';
 
 export function activate(context: vscode.ExtensionContext) {
 	context.subscriptions.push(vscode.commands.registerCommand('agili.saveAndRepeat', (language : string = '') => {
@@ -17,6 +18,7 @@ export function activate(context: vscode.ExtensionContext) {
     context.subscriptions.push(vscode.commands.registerCommand('agili.hello', (ispowershell: boolean = false) => {
         const escape = ispowershell ? 'O' : '[';
         console.log(`Hello1 ${escape}!!!`);
+        console.log(`i am using a liv ${Fbutil.inc(5)}`);
     }));
 }
 
