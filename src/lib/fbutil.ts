@@ -9,6 +9,8 @@ export default class Fbutil {
     let taill = tail.slice(0, tail.indexOf(sep));
     let head = lines.slice(0, line);
     let headl = head.slice(head.lastIndexOf(sep) + 1);
-    return headl.concat(taill).join("\n") + `\n`;
+    let cell = headl.concat(taill);
+    let code = cell.map((s) => s.replace(/^## /, ""));
+    return code.join("\n") + `\n`;
   }
 }
