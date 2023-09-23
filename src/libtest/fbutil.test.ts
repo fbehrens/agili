@@ -19,7 +19,9 @@ describe("Fbutil", () => {
     );
   });
   it("between_markers", () => {
-    let text = `1\n#% startmarker\n2\n## 3\n4\n#% endmarker\n5\n`;
+    let text = `0\n1\n#% startmarker\n2\n## 3\n4\n#% endmarker\n5\n`;
     assert.strictEqual(Fbutil.between_markers(text, 3), `2\n3\n4\n`);
+    assert.strictEqual(Fbutil.between_markers(text, 0), `0\n1\n`);
+    assert.strictEqual(Fbutil.between_markers(text, 1), `0\n1\n`);
   });
 });
