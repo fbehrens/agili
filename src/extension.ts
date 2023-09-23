@@ -40,15 +40,11 @@ export function activate(context: vscode.ExtensionContext) {
   );
   context.subscriptions.push(
     vscode.commands.registerCommand("agili.execute_cell", () => {
-      let terminal = vscode.window.activeTerminal;
-      if (terminal) {
-        const s = Agili.getCode();
-        console.log(`terminal.sendText:
->>>${s}<<<`);
-        terminal.sendText(s);
-      } else {
-        vscode.window.showErrorMessage("No active terminals");
-      }
+      const s = Agili.getCode();
+      console.log(`terminal.sendSequence: >>>${s}<<<`);
+      vscode.commands.executeCommand("workbench.action.terminal.sendSequence", {
+        text: s,
+      });
     })
   );
 
