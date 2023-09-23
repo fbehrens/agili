@@ -1,8 +1,8 @@
 print(1)
-#%
+#% start
 def greet(name):
-    print(f'Hello {name}')
+    print(f'Hi {name}, nice to see you')
 
-greet('Frank')
-#%
+## greet('Claudia') # pseudocomment
+#% end
 print(1)

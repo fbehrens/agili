@@ -30,7 +30,7 @@
       },
       {
         "command": "agili.execute_cell",
-        "title": "agili: Execute Cell (#%)"
+        "title": "agili: Execute Cell surrounded by '#% ...' markers"
       },
       {
         "command": "agili.hello",
