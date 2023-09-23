@@ -8,14 +8,14 @@ Agili is a minimal extension which provides the following commands
 ```python
 print(1)
 
-#% start
+# % start
 
 def greet(name):
     print(f'Hi {name}, nice to see you')
 
-## greet('Claudia') # pseudocomment will be removed when executing block
+# >greet('Claudia') # pseudocomment will be removed when executing block
 
-#% end
+# % end
 
 print(1)
 ```

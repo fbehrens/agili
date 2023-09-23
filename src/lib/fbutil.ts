@@ -5,7 +5,7 @@ export default class Fbutil {
     return n + 1;
   }
   static activatePseudoComments(s: string): string {
-    return s.replace(/\n## /g, `\n`);
+    return s.replace(/\n# >/g, `\n`);
   }
 
   static findLastIndex<T>(
@@ -21,7 +21,7 @@ export default class Fbutil {
 
   static between_markers(text: string, line: number) {
     let lines = text.split(`\n`);
-    const sep = "#%";
+    const sep = "# %";
     let tail = lines.slice(line);
     let taill = tail.slice(
       0,
@@ -32,7 +32,7 @@ export default class Fbutil {
       Fbutil.findLastIndex(head, (e: string) => e.startsWith(sep)) + 1
     );
     let cell = headl.concat(taill);
-    let code = cell.map((s) => s.replace(/^## /, ""));
+    let code = cell.map((s) => s.replace(/^# >/, ""));
     return code.join("\n") + `\n`;
   }
 }

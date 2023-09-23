@@ -1,13 +1,15 @@
 print(1)
 
-#% start of cell
+# % start of cell
 
 print('bla')
+
 
 def greet(name):
     print(f'Hi {name}, nice to see you')
 
-## greet('Claudia') # pseudocomment
+# >greet('Claudia') # pseudocomment
 
-#% end of cell
+
+# % end of cell
 print(1)

@@ -8,7 +8,7 @@ describe("Fbutil", () => {
   });
   it("activatePseudoComments", () => {
     assert.strictEqual(
-      Fbutil.activatePseudoComments(`1\n## 2\n3\n## 4\n`),
+      Fbutil.activatePseudoComments(`1\n# >2\n3\n# >4\n`),
       `1\n2\n3\n4\n`
     );
   });
@@ -19,7 +19,7 @@ describe("Fbutil", () => {
     );
   });
   it("between_markers", () => {
-    let text = `0\n1\n#% startmarker\n2\n## 3\n4\n#% endmarker\n5\n`;
+    let text = `0\n1\n# % startmarker\n2\n# >3\n4\n# % endmarker\n5\n`;
     assert.strictEqual(Fbutil.between_markers(text, 3), `2\n3\n4\n`);
     assert.strictEqual(Fbutil.between_markers(text, 0), `0\n1\n`);
     assert.strictEqual(Fbutil.between_markers(text, 1), `0\n1\n`);
