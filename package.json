@@ -5,8 +5,8 @@
     "type": "git",
     "url": "https://github.com/fbehrens/agili.git"
   },
-  "displayName": "agili",
-  "description": "description",
+  "displayName": "Agili",
+  "description": "little helpers to use Terminal for interactive development",
   "version": "0.4.1",
   "engines": {
     "vscode": "^1.82.0"
