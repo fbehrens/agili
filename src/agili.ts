@@ -11,7 +11,7 @@ export default class Agili {
       console.log(`s.line=` + pos.line);
       return Fbutil.between_markers(d.getText(), pos.line);
     } else {
-      return d.getText(s);
+      return Fbutil.activatePseudoComments(d.getText(s));
     }
   }
 }

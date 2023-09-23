@@ -4,6 +4,9 @@ export default class Fbutil {
   static inc(n: number) {
     return n + 1;
   }
+  static activatePseudoComments(s: string): string {
+    return s.replace(/\n## /g, `\n`);
+  }
 
   static findLastIndex<T>(
     array: Array<T>,
@@ -15,6 +18,7 @@ export default class Fbutil {
     }
     return -1;
   }
+
   static between_markers(text: string, line: number) {
     let lines = text.split(`\n`);
     const sep = "#%";

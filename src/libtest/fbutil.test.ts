@@ -6,6 +6,12 @@ describe("Fbutil", () => {
     let r = Fbutil.inc(6);
     assert.strictEqual(r, 7);
   });
+  it("activatePseudoComments", () => {
+    assert.strictEqual(
+      Fbutil.activatePseudoComments(`1\n## 2\n3\n## 4\n`),
+      `1\n2\n3\n4\n`
+    );
+  });
   it("findLastIndex", () => {
     assert.strictEqual(
       Fbutil.findLastIndex([1, 2, 4, 3, 5, 2, 1], (e) => e > 2),
