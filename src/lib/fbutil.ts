@@ -14,12 +14,12 @@ export default class Fbutil {
   ): number {
     let l = array.length;
     while (l--) {
-      if (predicate(array[l])) return l;
+      if (predicate(array[l])){ return l;};
     }
     return -1;
   }
 
-  static between_markers(text: string, line: number) {
+  static betweenMarkers(text: string, line: number) {
     let lines = text.split(`\n`);
     const sep = "# %";
     let tail = lines.slice(line);

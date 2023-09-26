@@ -9,7 +9,7 @@ export default class Agili {
     if (s.isEmpty) {
       const pos = s.active;
       console.log(`s.line=` + pos.line);
-      return Fbutil.between_markers(d.getText(), pos.line);
+      return Fbutil.betweenMarkers(d.getText(), pos.line);
     } else {
       return Fbutil.activatePseudoComments(d.getText(s));
     }
