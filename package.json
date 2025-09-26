@@ -1,71 +1,71 @@
 {
-  "name": "agili",
-  "publisher": "fbehrens",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/fbehrens/agili.git"
-  },
-  "displayName": "Agili",
-  "description": "little helpers to use Terminal for interactive development",
-  "version": "0.4.3",
-  "engines": {
-    "vscode": "^1.82.0"
-  },
-  "categories": [
-    "Other"
-  ],
-  "activationEvents": [
-    "onCommand:agili.*"
-  ],
-  "main": "./out/extension.js",
-  "contributes": {
-    "commands": [
-      {
-        "command": "agili.saveAndRepeat",
-        "title": "agili: Save and Repeat last Command in Terminal"
-      },
-      {
-        "command": "agili.saveAllAndRepeat",
-        "title": "agili: Save All and Repeat last Command in Terminal"
-      },
-      {
-        "command": "agili.execute_cell",
-        "title": "agili: Execute Cell surrounded by markers (# %)"
-      },
-      {
-        "command": "agili.hello",
-        "title": "agili: Hello"
-      }
+    "name": "agili",
+    "publisher": "fbehrens",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/fbehrens/agili.git"
+    },
+    "displayName": "Agili",
+    "description": "little helpers to use Terminal for interactive development",
+    "version": "0.4.3",
+    "engines": {
+        "vscode": "^1.82.0"
+    },
+    "categories": [
+        "Other"
     ],
-    "keybindings": [
-      {
-        "key": "Alt+F12",
-        "command": "agili.hello",
-        "args": false
-      }
-    ]
-  },
-  "scripts": {
-    "vscode:prepublish": "npm run compile",
-    "compile": "tsc -p ./",
-    "watch": "tsc -watch -p ./",
-    "test": "mocha -r ts-node/esm src/libtest/*.test.ts --watch --watch-files src/lib/*.ts,src/libtest/*.ts",
-    "pretest": "npm run compile && npm run lint",
-    "lint": "eslint src --ext ts",
-    "testold": "node ./out/test/runTest.js"
-  },
-  "devDependencies": {
-    "@types/mocha": "^10.0.1",
-    "@types/node": "16.x",
-    "@types/vscode": "^1.82.0",
-    "@typescript-eslint/eslint-plugin": "^6.4.1",
-    "@typescript-eslint/parser": "^6.4.1",
-    "@vscode/test-electron": "^2.3.4",
-    "eslint": "^8.47.0",
-    "glob": "^10.3.3",
-    "mocha": "^10.2.0",
-    "prettier": "^3.0.3",
-    "ts-node": "^10.9.1",
-    "typescript": "^5.1.6"
-  }
+    "activationEvents": [
+        "onCommand:agili.*"
+    ],
+    "main": "./out/extension.js",
+    "contributes": {
+        "commands": [
+            {
+                "command": "agili.saveAndRepeat",
+                "title": "agili: Save and Repeat last Command in Terminal"
+            },
+            {
+                "command": "agili.saveAllAndRepeat",
+                "title": "agili: Save All and Repeat last Command in Terminal"
+            },
+            {
+                "command": "agili.execute_cell",
+                "title": "agili: Execute Cell surrounded by markers (# %)"
+            },
+            {
+                "command": "agili.runActiveEditorFile",
+                "title": "agili: Run File in Active Editor"
+            }
+        ],
+        "keybindings": [
+            {
+                "key": "Alt+F12",
+                "command": "agili.hello",
+                "args": false
+            }
+        ]
+    },
+    "scripts": {
+        "vscode:prepublish": "npm run compile",
+        "compile": "tsc -p ./",
+        "watch": "tsc -watch -p ./",
+        "test": "mocha -r ts-node/esm src/libtest/*.test.ts --watch --watch-files src/lib/*.ts,src/libtest/*.ts",
+        "pretest": "npm run compile && npm run lint",
+        "lint": "eslint src --ext ts",
+        "testold": "node ./out/test/runTest.js"
+    },
+    "devDependencies": {
+        "@types/mocha": "^10.0.1",
+        "@types/node": "16.x",
+        "@types/vscode": "^1.82.0",
+        "@typescript-eslint/eslint-plugin": "^6.4.1",
+        "@typescript-eslint/parser": "^6.4.1",
+        "@vscode/test-electron": "^2.3.4",
+        "eslint": "^8.47.0",
+        "glob": "^10.3.3",
+        "mocha": "^10.2.0",
+        "prettier": "^3.0.3",
+        "ts-node": "^10.9.1",
+        "typescript": "^5.1.6"
+    }
 }

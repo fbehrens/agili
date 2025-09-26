@@ -26,6 +26,7 @@ export function activate(context: vscode.ExtensionContext) {
       "agili.saveAllAndRepeat",
       (language: string = "") => {
         const escape = language === "powershell" ? "O" : "[";
+        console.log({ escape });
         const seq = `\u001b${escape}A\n`;
         vscode.commands
           .executeCommand("workbench.action.files.saveAll")
@@ -49,13 +50,23 @@ export function activate(context: vscode.ExtensionContext) {
   );
 
   context.subscriptions.push(
-    vscode.commands.registerCommand(
-      "agili.hello",
-      (ispowershell: boolean = false) => {
-        const escape = ispowershell ? "O" : "[";
-        console.log(`ispowershell = ${ispowershell}`);
+    vscode.commands.registerCommand("agili.runActiveEditorFile", () => {
+      const e = vscode.window.activeTextEditor;
+      if (!e) {
+        return undefined;
       }
-    )
+      const filename = e.document.fileName;
+      const ext = filename.split(".").at(-1)!;
+      const interpreter = { py: "python3", ts: "tsx", js: "node" }[ext];
+      if (!interpreter) {
+        return undefined;
+      }
+      vscode.commands.executeCommand("workbench.action.terminal.sendSequence", {
+        text: `${interpreter} ${filename}\n`,
+      });
+
+      //   console.log({ filename, ext, interpreter });
+    })
   );
 }
 
