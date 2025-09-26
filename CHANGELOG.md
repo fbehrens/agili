@@ -1,9 +1,6 @@
 # Change Log
 
-All notable changes to the "agili" extension will be documented in this file.
-
 Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how to structure this file.
 
-## [Unreleased]
-
-- Initial release
+- 0.5.0 runActiveEditorFile
+- 0.4.4
