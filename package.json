@@ -7,7 +7,7 @@
     },
     "displayName": "Agili",
     "description": "little helpers to use Terminal for interactive development",
-    "version": "0.5.0",
+    "version": "0.5.1",
     "engines": {
         "vscode": "^1.82.0"
     },
@@ -34,7 +34,7 @@
             },
             {
                 "command": "agili.runActiveEditorFile",
-                "title": "agili: Run File in Active Editor"
+                "title": "agili: Save and Run File in Active Editor"
             }
         ],
         "keybindings": [

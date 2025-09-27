@@ -61,10 +61,15 @@ export function activate(context: vscode.ExtensionContext) {
       if (!interpreter) {
         return undefined;
       }
-      vscode.commands.executeCommand("workbench.action.terminal.sendSequence", {
-        text: `${interpreter} ${filename}\n`,
-      });
 
+      vscode.commands
+        .executeCommand("workbench.action.files.save")
+        .then(() =>
+          vscode.commands.executeCommand(
+            "workbench.action.terminal.sendSequence",
+            { text: `${interpreter} ${filename}\n` }
+          )
+        );
       //   console.log({ filename, ext, interpreter });
     })
   );
