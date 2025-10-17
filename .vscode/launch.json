@@ -11,6 +11,7 @@
             "request": "launch",
             "args": [
                 "--extensionDevelopmentPath=${workspaceFolder}",
+                "${workspaceFolder}/testfiles",
                 "${workspaceFolder}/testfiles/1.py"
             ],
             "outFiles": [
