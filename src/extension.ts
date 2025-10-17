@@ -57,7 +57,8 @@ export function activate(context: vscode.ExtensionContext) {
       }
       const filename = e.document.fileName;
       const ext = filename.split(".").at(-1)!;
-      const interpreter = { py: "python3", ts: "tsx", js: "node" }[ext];
+      const interpreterMapping = vscode.workspace.getConfiguration('agili').get('interpreterMapping') as {[key: string]: string};
+      const interpreter = interpreterMapping[ext];
       if (!interpreter) {
         vscode.window.showWarningMessage(
           `agili.runActiveEditorFile: no interpreter configured for extension ${ext}`

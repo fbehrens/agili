@@ -2,11 +2,12 @@ print(1)
 
 # % start of cell
 
-print('bla')
+print("bla")
 
 
 def greet(name):
-    print(f'Hi {name}, nice to see you')
+    print(f"Hi {name}, nice to see you")
+
 
 # >greet('Claudia') # pseudocomment
 

@@ -7,7 +7,7 @@
     },
     "displayName": "Agili",
     "description": "little helpers to use Terminal for interactive development",
-    "version": "0.5.1",
+    "version": "0.5.2",
     "engines": {
         "vscode": "^1.82.0"
     },
@@ -43,7 +43,21 @@
                 "command": "agili.hello",
                 "args": false
             }
-        ]
+        ],
+        "configuration": {
+            "title": "Agili",
+            "properties": {
+                "agili.interpreterMapping": {
+                    "type": "object",
+                    "default": {
+                        "py": "python3",
+                        "ts": "tsx",
+                        "js": "node"
+                    },
+                    "description": "Mapping from file extension to interpreter command."
+                }
+            }
+        }
     },
     "scripts": {
         "vscode:prepublish": "npm run compile",
